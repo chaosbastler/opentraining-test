@@ -1,6 +1,6 @@
 /**
  * 
- * This is OpenTraining, an Android application for planning your your fitness training.
+ * This is a unit test for OpenTraining, an Android application for planning your your fitness training.
  * Copyright (C) 2012 Christian Skubich
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -17,8 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  */
-
-package de.skubware.opentraining.test;
+package de.skubware.opentraining.test.basic;
 
 import java.util.*;
 
@@ -27,7 +26,11 @@ import de.skubware.opentraining.basic.*;
 
 import junit.framework.TestCase;
 
-
+/**
+ * JUnit test for class {@link Workout}.
+ * 
+ * @author Christian Skubich
+ */
 public class WorkoutTest extends TestCase {
 	
 	String TEST_NAME_1 = "Test Workout 1";
@@ -83,15 +86,12 @@ public class WorkoutTest extends TestCase {
 		assertTrue(ExerciseType.removeExerciseType(EX_1));
 		assertTrue(ExerciseType.removeExerciseType(EX_2));
 		assertTrue(ExerciseType.removeExerciseType(EX_3));
-
 		
 		assertTrue(ExerciseType.listExerciseTypes().isEmpty());
 	}
 	
 	
-	/**
-	 * Using @Test(expected=NullPointerException.class) does not work.
-	 */
+	/** Tests no/null arguments for constructor */
 	public void testEmptyConstructorArguments(){
 		try{
 			new Workout(null);
@@ -117,9 +117,7 @@ public class WorkoutTest extends TestCase {
 	
 	
 
-	/**
-	 * Tests if a constructed object with some FitnessExercises is really as it should be.
-	 */
+	/** Tests if a constructed object with some FitnessExercises is really as it should be. */
 	public void testFullWorkout(){
 		assertEquals(WORKOUT_1.getName(), TEST_NAME_1);
 		
@@ -134,9 +132,8 @@ public class WorkoutTest extends TestCase {
 		assertEquals(WORKOUT_1.getFitnessExercises().size(), 3);
 	}
 	
-	/**
-	 * Tests the equals method of Workout.
-	 */
+	
+	/** Test of method {@link Workout#equals(Object)}. */
 	public void testEquals(){
 		// test null
 		assertFalse(WORKOUT_1.equals(null));
@@ -169,7 +166,8 @@ public class WorkoutTest extends TestCase {
 	}
 	
 	/**
-	 * Test of method {@libj switchExercises()}
+	 * Test of method {@link Workout#switchExercises(FitnessExercise, FitnessExercise)}.
+	 * Tries two switch two exercises.
 	 */
 	public void testSwitching(){
 		// clone WORKOUT_1

@@ -18,7 +18,7 @@
  * 
  */
 
-package de.skubware.opentraining.test;
+package de.skubware.opentraining.test.basic;
 
 
 import java.lang.reflect.Constructor;

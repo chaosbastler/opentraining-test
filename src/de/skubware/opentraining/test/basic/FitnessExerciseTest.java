@@ -1,6 +1,6 @@
 /**
  * 
- * This is OpenTraining, an Android application for planning your your fitness training.
+ * This is a unit test for OpenTraining, an Android application for planning your your fitness training.
  * Copyright (C) 2012 Christian Skubich
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
  * 
  */
 
-package de.skubware.opentraining.test;
+package de.skubware.opentraining.test.basic;
 
 
 import java.util.Arrays;
